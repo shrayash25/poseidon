@@ -1,0 +1,304 @@
+/* General Styling */
+body {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+    background-color: #000000;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    --color: rgba(114, 114, 114, 0.3);
+    background-color: #191a1a;
+    background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%, transparent),
+    linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%, transparent);
+    background-size: 55px 55px;
+}
+.opbtn{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1rem;
+    color:white;
+    background-color: black;
+    border:2px solid white;
+    border-radius:3px;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.hhead {
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-group {
+    margin: 20px 0;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.cards {
+    display: none; /* Hide cards initially */
+    margin-top: 20px;
+}
+
+.cards.active {
+    display: block; /* Show active cards */
+}
+
+.card-section {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping */
+    justify-content: center;
+    gap: 10px;
+}
+
+.card {
+    flex: 1 1 22%; /* 22% width with flex, allowing 4 in a row with space */
+    max-width: 250px; /* Max width of a card */
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    background-color: #333;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card h3 {
+
+    margin: 10px 0;
+    display:flex; justify-content: center;
+}
+.txx{
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding:1rem;
+  }
+.card p {
+    margin: 0;
+}
+
+.selectors {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.code-section {
+    border: 2px white solid;
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+    padding: 0.7rem;
+    color: black;
+    background-color: rgb(103, 213, 84);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.sechead {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.atcb{
+    padding:0.5rem;
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid #ffffff;
+    border-radius: 0.5rem;
+
+}
+
+.atcb:hover{
+    background-color: rgba(255, 255, 255,0.2);
+}
+.icnn{
+   font-size:150%;
+}
+
+
+.size-selector {
+    width: 60px;
+    padding: 5px;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    background-color: #000000;
+    font-size: 14px;
+    color: #ffffff;
+    cursor: pointer;
+    text-align: center;
+}
+
+.size-selector:hover {
+    border-color: #0056b3;
+}
+
+.size-selector:focus {
+    outline: none;
+    border-color: #ff9800;
+    box-shadow: 0 0 5px rgba(255, 152, 0, 0.5);
+}
+
+
+/* Responsive Layout */
+@media (max-width: 1200px) {
+    .card {
+        flex: 1 1 30%; /* 3 in a row on smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 45%; /* 2 in a row on tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        flex: 1 1 90%; /* 1 in a row on mobile */
+    }
+}
+
+
+/* From Uiverse.io by Galahhad */ 
+/* tooltip settings 👇 */
+
+.copy {
+    /* button */
+    --button-bg: #353434;
+    --button-hover-bg: #464646;
+    --button-text-color: #CCCCCC;
+    --button-hover-text-color: #8bb9fe;
+    --button-border-radius: 10px;
+    --button-diameter: 36px;
+    --button-outline-width: 1px;
+    --button-outline-color: rgb(141, 141, 141);
+    /* tooltip */
+    --tooltip-bg: #f4f3f3;
+    --toolptip-border-radius: 4px;
+    --tooltip-font-family: Menlo, Roboto Mono, monospace;
+    /* 👆 this field should not be empty */
+    --tooltip-font-size: 12px;
+    /* 👆 this field should not be empty */
+    --tootip-text-color: rgb(50, 50, 50);
+    --tooltip-padding-x: 7px;
+    --tooltip-padding-y: 7px;
+    --tooltip-offset: 8px;
+    /* --tooltip-transition-duration: 0.3s; */
+    /* 👆 if you need a transition, 
+    just remove the comment,
+    but I didn't like the transition :| */
+  }
+  
+  .copy {
+    box-sizing: border-box;
+    width: var(--button-diameter);
+    height: var(--button-diameter);
+    border-radius: var(--button-border-radius);
+    background-color: var(--button-bg);
+    color: var(--button-text-color);
+    border: none;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+  }
+  
+  .tooltip {
+    position: absolute;
+    opacity: 0;
+    visibility: 0;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font: var(--tooltip-font-size) var(--tooltip-font-family);
+    color: var(--tootip-text-color);
+    background: var(--tooltip-bg);
+    padding: var(--tooltip-padding-y) var(--tooltip-padding-x);
+    border-radius: var(--toolptip-border-radius);
+    pointer-events: none;
+    transition: all var(--tooltip-transition-duration) cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .tooltip::before {
+    content: attr(data-text-initial);
+  }
+  
+  .tooltip::after {
+    content: "";
+    position: absolute;
+    bottom: calc(var(--tooltip-padding-y) / 2 * -1);
+    width: var(--tooltip-padding-y);
+    height: var(--tooltip-padding-y);
+    background: inherit;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    z-index: -999;
+    pointer-events: none;
+  }
+  
+  .copy svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .checkmark {
+    display: none;
+  }
+  
+  /* actions */
+  
+  .copy:hover .tooltip,
+  .copy:focus:not(:focus-visible) .tooltip {
+    opacity: 1;
+    visibility: visible;
+    top: calc((100% + var(--tooltip-offset)) * -1);
+  }
+  
+  .copy:focus:not(:focus-visible) .tooltip::before {
+    content: attr(data-text-end);
+  }
+  
+  .copy:focus:not(:focus-visible) .clipboard {
+    display: none;
+  }
+  
+  .copy:focus:not(:focus-visible) .checkmark {
+    display: block;
+  }
+  
+  .copy:hover,
+  .copy:focus {
+    background-color: var(--button-hover-bg);
+  }
+  
+  .copy:active {
+    outline: var(--button-outline-width) solid var(--button-outline-color);
+  }
+  
+  .copy:hover svg {
+    color: var(--button-hover-text-color);
+  }
